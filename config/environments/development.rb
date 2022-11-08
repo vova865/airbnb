@@ -73,6 +73,16 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    # address: 'smtp.gmail.com',
+    # port: 587,
+    # enable_starttls_auto: true,
+    # authentication: :plain,
+    # user_name: 'vova.com940@gmail.com',
+    # password: '093f708a9f4ce8278ebe30429ece17eafda890160740ea77f091c874231d59b8'
+    :address => '127.0.0.1', :port => 1025
+  }
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
 end
