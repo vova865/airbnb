@@ -15,7 +15,7 @@
             <li class="nav-item"><%= link_to "Sign Up", new_user_registration_path, class: "nav-link active" %>/li>
           <% else %>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false"><%= current_user.fullname %></a>
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false"><%= image_tag avatar_url(current_user), class: "rounded-circle avatar_small" %>&nbsp;<%= current_user.fullname %></a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Manage Listings</a></li>
               <li><a class="dropdown-item" href="#">List Your Space</a></li>
