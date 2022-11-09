@@ -8,6 +8,14 @@
   </div>
 
   <div class="field">
+    <%= f.text_field :phone_number, placeholder: "Phone Number" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_area :description, rows: 5, cols: 25, placeholder: "Description" %>
+  </div>
+
+  <div class="field">
     <%= f.email_field :email, placeholder: "Email" %>
   </div>
 
@@ -44,3 +52,5 @@
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
 <%= link_to "Back", :back %>
+
+<%= link_to "View my profile", user_path(current_user.id), class: "btn btn-default" %>

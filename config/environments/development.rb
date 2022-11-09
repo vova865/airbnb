@@ -79,8 +79,8 @@ Rails.application.configure do
     # port: 587,
     # enable_starttls_auto: true,
     # authentication: :plain,
-    # user_name: 'vova.com940@gmail.com',
-    # password: '093f708a9f4ce8278ebe30429ece17eafda890160740ea77f091c874231d59b8'
+    # user_name: Rails.application.secrets[:user_name],
+    # password: Rails.application.secrets[:password]
     :address => '127.0.0.1', :port => 1025
   }
   # Uncomment if you wish to allow Action Cable access from any origin.

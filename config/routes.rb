@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users,
+             path: '',
+             path_names: { sign_in: 'login', sign_out: 'logout', edit: 'profile', sign_up: 'registration' }
+  # devise_scope :user do
+  #   get 'login', to: 'devise/sessions#new'
+  # end
   root 'pages#home'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :users, only: :show
 end
