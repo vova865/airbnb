@@ -85,4 +85,19 @@ Rails.application.configure do
   }
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+  # config.paperclip_defaults = {
+  #   storage: :s3,
+  #   s3_region: 'us-east-1',
+  #   s3_credentials: {
+  #     bucket: 'airbnb-bucket',
+  #     access_key_id: Rails.application.secrets.minio[:access_key],
+  #     secret_access_key: Rails.application.secrets.minio[:secret_key],
+  #   },
+  #   s3_host_name: 'localhost:9000',
+  #   s3_options: {
+  #     endpoint: "http://localhost:9000",
+  #     force_path_style: true,
+  #     path: '/:class/:attachment/:id_partition/:style/:filename'
+  #   },
+  # }
 end
