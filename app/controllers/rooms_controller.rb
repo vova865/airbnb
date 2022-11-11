@@ -12,7 +12,6 @@ class RoomsController < ApplicationController
   end
 
   def create
-    # binding.pry
     @room = current_user.rooms.build(room_params)
     if @room.save
       redirect_to listing_room_path(@room), notice: 'Saved...'

@@ -2,10 +2,10 @@
   <div class="col-md-3">
     <%= render 'room_menu' %>
   </div>
-  <div class="container">
+  <div class="text-center">
     Amenities
   </div>
-  <div class="container">
+  <div class="text-center">
     <%= form_for @room do |f| %>
 
       <div class="row form-group">
@@ -28,7 +28,7 @@
       <br/><br/>
 
       <div class="text-center">
-        <%= f.submit "Save", class: "btn btn-form" %>
+        <%= f.submit "Save" %>
       </div>
     <% end %>
   </div>

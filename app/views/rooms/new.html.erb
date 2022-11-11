@@ -3,19 +3,19 @@
   <div class="container">
     <%= form_for @room do |f| %>
       <label>Home Type</label>
-      <%= f.select :home_type,  [["Apartment", "Apartment"], ["House", "House"], ["Bed & Breakfast", "Bed & Breakfast"]], prompt: "Select..." %>
+      <%= f.select :home_type, [["Apartment", "Apartment"], ["House", "House"], ["Bed & Breakfast", "Bed & Breakfast"]], prompt: "Select..." %>
       <br>
       <label>Room Type</label>
-      <%= f.select :room_type,  [["Entire", "Entire"], ["Private", "Private"], ["Shared", "Shared"]], prompt: "Select..." %>
+      <%= f.select :room_type, [["Entire", "Entire"], ["Private", "Private"], ["Shared", "Shared"]], prompt: "Select..." %>
       <br>
       <label>Accommodate</label>
-      <%= f.select :accommodate,  [["1", 1], ["2", 2], ["3", 3], ["4", 4]], prompt: "Select..." %>
+      <%= f.select :accommodate, [["1", 1], ["2", 2], ["3", 3], ["4", 4]], prompt: "Select..." %>
       <br>
       <label>Bedrooms</label>
-      <%= f.select :bed_room,  [["1", 1], ["2", 2], ["3", 3], ["4", 4]], prompt: "Select..." %>
+      <%= f.select :bed_room, [["1", 1], ["2", 2], ["3", 3], ["4", 4]], prompt: "Select..." %>
       <br>
       <label>Bathroom</label>
-      <%= f.select :bath_room,  [["1", 1], ["2", 2], ["3", 3], ["4", 4]], prompt: "Select..." %>
+      <%= f.select :bath_room, [["1", 1], ["2", 2], ["3", 3], ["4", 4]], prompt: "Select..." %>
 
       <div><%= f.submit %></div>
     <% end %>

@@ -2,10 +2,10 @@
   <div class="col-md-3">
     <%= render 'room_menu' %>
   </div>
-  <div class="container">
+  <div class="text-center">
     Listing
   </div>
-  <div class="container">
+  <div class="text-center">
     <%= form_for @room do |f| %>
       <label>Home Type</label>
       <%= f.select :home_type,  [%w[Apartment Apartment], %w[House House], ["Bed & Breakfast", "Bed & Breakfast"]],
@@ -13,7 +13,7 @@
       <br>
       <label>Room Type</label>
       <%= f.select :room_type,  [%w[Entire Entire], %w[Private Private], %w[Shared Shared]],
-                   id: "home_type", prompt: "Select..." %>
+                   id: "room_type", prompt: "Select..." %>
       <br>
       <label>Accommodate</label>
       <%= f.select :accommodate,  [["1", 1], ["2", 2], ["3", 3], ["4", 4]],
