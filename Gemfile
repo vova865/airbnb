@@ -54,8 +54,10 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'aws-sdk-s3'
+gem 'cancancan'
 gem 'devise'
 gem 'font-awesome-sass', '~> 6.2.0'
+gem 'geocoder', '~> 1.8', '>= 1.8.1'
 gem 'paperclip', '~> 6.0.0'
 gem 'pry-rails'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
