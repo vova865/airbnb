@@ -28,13 +28,21 @@
       ymaps.ready(init);
       function init(){
           var myMap = new ymaps.Map("map", {
-              center: [55.76, 37.64],
-              zoom: 9
+              center: [48.023, 37.8022],
+              zoom: 11
           });
           var myGeoObject = new ymaps.GeoObject({
               geometry: {
                   type: "Point", // тип геометрии - точка
-                  coordinates: [55.8, 37.8] // координаты точки
+                  coordinates: [<%= @room.latitude %>, <%= @room.longitude %> ] // координаты точки
+              },
+              properties: {
+                  balloonContentLayout: ymaps.templateLayoutFactory.createClass(
+                      '<div class="my-balloon">' +
+                      '<img src=<%= image_tag @room.photos.first.url %>>' + // добавление изображения
+                      '<p>Описание метки</p>' +
+                      '</div>'
+                  )
               }
           });
           myMap.geoObjects.add(myGeoObject);

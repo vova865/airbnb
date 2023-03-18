@@ -1,3 +1,30 @@
+# == Schema Information
+#
+# Table name: rooms
+#
+#  id           :bigint           not null, primary key
+#  home_type    :string
+#  room_type    :string
+#  accommodate  :integer
+#  bed_room     :integer
+#  bath_room    :integer
+#  listing_name :string
+#  summary      :text
+#  address      :string
+#  is_tv        :boolean
+#  is_kitchen   :boolean
+#  is_air       :string
+#  boolean      :string
+#  is_heating   :boolean
+#  is_internet  :boolean
+#  price        :integer
+#  active       :boolean
+#  user_id      :bigint           not null
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#  latitude     :float
+#  longitude    :float
+#
 class Room < ApplicationRecord
   belongs_to :user
   has_many :photos
