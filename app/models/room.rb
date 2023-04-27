@@ -33,4 +33,12 @@ class Room < ApplicationRecord
   after_validation :geocode, if: :address_changed?
 
   validates :home_type, :room_type, :accommodate, :bed_room, :bath_room, presence: true
+
+  def cover_photo(size)
+    if self.photos.length.positive?
+      self.photos[0].image.url(size)
+    else
+      'blank.jpg'
+    end
+  end
 end
