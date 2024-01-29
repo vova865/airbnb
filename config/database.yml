@@ -25,7 +25,9 @@ development:
   <<: *default
   username: postgres
   password: postgres
-  database: airbnb
+  host: localhost
+  port: 5432
+  database: <%= ENV['DATABASE_NAME'] || "airbnb" %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
